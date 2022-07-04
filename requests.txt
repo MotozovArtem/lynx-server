@@ -1,0 +1,3 @@
+curl -X POST -F file=@hello.txt -F filename=hello.txt http://localhost:8080/file/add
+curl -X POST -H 'Content-Type: application/json' -d '{"username":"admin","password":"admin"}' http://localhost:8080/token/generate-token
+curl -X POST -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0IiwiaWF0IjoxNjQ5NDE4MzA5LCJleHAiOjE2NDk0MzYzMDl9.l9b-z4XYw9kz9Mgk8oaM7w7U5gWXyQdm8arYpRUpeds" -F file=@hello.txt -F filename=hello.txt http://localhost:8080/file/add

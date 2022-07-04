@@ -1,0 +1,20 @@
+version: '3.2'
+
+services:
+  peerstock-db:
+    container_name: peerstock-db
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: peerstock
+  peerstock-file-storage:
+    container_name: peerstock-file-storage
+    image: mongo:5.0.6
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
